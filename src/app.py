@@ -131,6 +131,7 @@ def read_statement_file(file: io.TextIOBase, filename: str) -> pd.DataFrame:
         df["Total"] = df[["Debit", "Credit"]].sum(axis=1)
         df["Report_Year"] = df["Report Date"].dt.year.astype("str")
         df["Activity_Year"] = df["Activity Date"].apply(lambda d: None if pd.isnull(d) else str(d.year))
+        df["Description"] = df["Description"].astype("str")
 
         # Skip all records which are not in base currency
         df = df.query("Currency == 'Base Currency Summary'").drop(columns=["Currency"])
