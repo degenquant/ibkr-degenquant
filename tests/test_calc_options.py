@@ -4,7 +4,7 @@ from decimal import Decimal
 import pandas as pd
 from pandas.testing import assert_frame_equal
 
-from utils import calc_profits_fifo
+from src.utils import calc_profits_fifo
 
 
 class LongTrades(unittest.TestCase):
