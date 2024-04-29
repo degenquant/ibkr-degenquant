@@ -1,25 +1,30 @@
-# IBKR Steuerrechner
-Zur Berechnung der Steuerschuld von Optionen- und Aktiengeschäften
+# IBKR Tax Calculator
+This tool calculates the tax liability from options and stock transactions.
 
-Mit diesem Programm kann der Kontoauszug, d.h. die Kapitalflussrechnung, von Interactive Brokers ausgewertet werden. Die folgenden Einträge werden erkannt und aufsummiert oder detaillierter analysiert:
-- Dividenden
-- Zinsen
-- Aktiengeschäfte
-- Optionsgeschäfte (inkl. Aufteilung in die einzelnen Trades)
-- Ein- und Auszahlungen
-- Währungsumrechnungen
-- Marktdatenabonnements
+## Description
+This program analyzes the account statement, i.e., the cash flow statement, from Interactive Brokers. It recognizes and sums up or analyzes in detail the following entries:
 
-## Anwendung
+- Dividends
+- Interest
+- Stock transactions
+- Options transactions (including breakdown into individual trades)
+- Deposits and withdrawals
+- Currency conversions
+- Market data subscriptions
 
-Dieses Programm steht online zur Verfügung: https://ibkr-steuerrechner.streamlit.app/
+## Usage
+This program is available online at: [IBKR Tax Calculator](https://ibkr-steuerrechner.streamlit.app/)
 
-Das Hosting erfolgt in der [Streamlit Community Cloud](https://streamlit.io/cloud). Falls das Programm nicht aktiv ist, starten Sie es über den Button, der in diesem Fall dargestellt wird.
+It is hosted on Streamlit Community Cloud. If the program is not active, you can start it using the button displayed in this case.
 
-Alternativ können Sie das Programm auf ihren eigenen Rechner herunterladen und dort starten. Grundkenntnisse in Python sind erforderlich, alle Abhängigkeiten sind in `requirements.txt` aufgelistet. Der Start erfolgt über `streamlit run src/app.py`
+Alternatively, you can download the program to your own computer and run it there. Basic knowledge of Python is required, and all dependencies are listed in `requirements.txt`. The program is started with the command:
 
-## Weiterentwicklung
+streamlit run src/app.py
 
-Dieses Programm ist Open Source. Sie sind eingeladen, selbst Änderungen vorzunehmen oder Erweiterungen zu programmieren und sie anschließend per Pull-Request bereitzustellen.
 
-Lokal können die Unit Tests mit `PYTHONPATH=$PWD/src python -m unittest` ausgeführt werden.
+## Development
+This program is open source. You are invited to make modifications or program extensions and contribute them back via a pull request.
+
+Unit tests can be run locally with the following command:
+
+PYTHONPATH=$PWD/src python -m unittest
